@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- FXML file for the Restaurant Order UI -->
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.restaurantordersimulation.RestaurantController">
+    <top>
+        <HBox spacing="10" alignment="CENTER">
+            <ChoiceBox fx:id="dishChoiceBox"/>
+            <Button text="Add to Order" onAction="#handleAddToOrder"/>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="orderTable">
+            <columns>
+                <TableColumn fx:id="nameColumn" text="Dish Name"/>
+                <TableColumn fx:id="priceColumn" text="Price"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <Label fx:id="totalPriceLabel" text="Total: $0.00"/>
+    </bottom>
+</BorderPane>
